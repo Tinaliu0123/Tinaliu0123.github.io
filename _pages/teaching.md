@@ -14,6 +14,6 @@ calendar: true
 
 <!-- {% include courses.liquid %} -->
 
-* **CSCI-SHU 360: Machine Learning** <span style="float:right; color:gray;">NYU Shanghai: 2026 Spring</span>
-* **MATH-SHU 140: Linear Algebra** <span style="float:right; color:gray;">NYU Shanghai: 2026 Spring</span>
-* **MATH-SHU 140: Linear Algebra** <span style="float:right; color:gray;">NYU Shanghai: 2024 Spring</span>
+- **CSCI-SHU 360: Machine Learning** <span style="float:right; color:gray;">NYU Shanghai: 2026 Spring</span>
+- **MATH-SHU 140: Linear Algebra** <span style="float:right; color:gray;">NYU Shanghai: 2026 Spring</span>
+- **MATH-SHU 140: Linear Algebra** <span style="float:right; color:gray;">NYU Shanghai: 2024 Spring</span>
