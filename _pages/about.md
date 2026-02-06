@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: 刘雨涵 (Liu Yu Han) #<a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: 刘雨涵 #<a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
 
 profile:
   align: right

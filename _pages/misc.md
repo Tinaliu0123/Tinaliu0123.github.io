@@ -8,3 +8,4 @@ nav_order: 7
 ---
 
 <!-- {% include news.liquid %} -->
+Coming soon ✨
