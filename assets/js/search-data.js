@@ -35,8 +35,8 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/al-folio/books/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
+            },},{id: "news-speculative-verdict-sv-is-accepted-by-iclr-2026",
+          title: 'Speculative Verdict (SV) is accepted by ICLR 2026.',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
