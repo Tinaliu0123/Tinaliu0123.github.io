@@ -1208,9 +1208,10 @@ nav[data-toggle="toc"] {
   display: none !important;
 }
 
+// Above Bootstrap .fixed-top / .fixed-bottom (z-index 1030) so zoomed images are not covered.
 .medium-zoom-overlay,
 .medium-zoom-image--opened {
-  z-index: 999;
+  z-index: 1100;
 }
 
 #toc-sidebar {

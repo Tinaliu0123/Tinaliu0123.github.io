@@ -85,6 +85,7 @@ let applyTheme = () => {
   if (typeof medium_zoom !== "undefined") {
     medium_zoom.update({
       background: getComputedStyle(document.documentElement).getPropertyValue("--global-bg-color") + "ee", // + 'ee' for trasparency.
+      margin: 24,
     });
   }
 };
