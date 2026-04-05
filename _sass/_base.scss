@@ -1209,9 +1209,35 @@ nav[data-toggle="toc"] {
 }
 
 // Above Bootstrap .fixed-top / .fixed-bottom (z-index 1030) so zoomed images are not covered.
-.medium-zoom-overlay,
+// medium-zoom injects a late <style> with 0.3s overlay opacity; full-viewport backdrop-filter
+// is expensive when combined with that fade — use lighter blur + shorter transitions (!important
+// so we win over the injected rule). Misc page has many large JPEGs; shorter motion also helps.
+.medium-zoom-overlay {
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  transform: translateZ(0);
+  z-index: 1100;
+  transition: opacity 0.2s ease !important;
+}
+
+.medium-zoom-image {
+  transition: transform 0.2s cubic-bezier(0.2, 0, 0.2, 1) !important;
+}
+
 .medium-zoom-image--opened {
   z-index: 1100;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .medium-zoom-overlay {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    transition: opacity 0.15s ease !important;
+  }
+
+  .medium-zoom-image {
+    transition: transform 0.15s cubic-bezier(0.2, 0, 0.2, 1) !important;
+  }
 }
 
 #toc-sidebar {
