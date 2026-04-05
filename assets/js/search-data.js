@@ -25,7 +25,7 @@ ninja.data = [{
           },
         },{id: "nav-misc",
           title: "Misc",
-          description: "",
+          description: "A few moments I captured that have great energy ☀️",
           section: "Navigation",
           handler: () => {
             window.location.href = "/misc/";
