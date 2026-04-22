@@ -24,7 +24,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hi! I’m a senior pursuing B.S. in Data Science (AI track) and Mathematics at [New York University Shanghai](https://shanghai.nyu.edu/) and [New York University](https://www.nyu.edu/). I am fortunate to work with Prof. [Shengjie Wang](https://sheng-jie-wang.github.io/) and Prof. [Lianhui Qin](https://lianhui.ucsd.edu/).
+Hi! I'm an incoming Ph.D. student in Computer Science at [NYU Courant](https://cims.nyu.edu/dynamic/) ([Shanghai Track](https://shanghai.nyu.edu/page/computer-science-phd-program)), starting Fall 2026. I’m currently completing my B.S. in Data Science (AI track) and Mathematics at [New York University Shanghai](https://shanghai.nyu.edu/) and [New York University](https://www.nyu.edu/). I am fortunate to work with Prof. [Shengjie Wang](https://sheng-jie-wang.github.io/) and Prof. [Lianhui Qin](https://lianhui.ucsd.edu/).
 
 My research interest lies at the intersection of **multimodal models** and **embodied AI**.
 
