@@ -1,11 +1,11 @@
 metadata:
-  last_updated: '2026-05-25'
+  last_updated: '2026-07-10'
 papers:
   MXhG1rkAAAAJ:d1gkVwhDpl0C:
     citations: 0
     title: 'SimWorld Studio: Automatic Environment Generation with Evolving Coding Agent for Embodied Agent Learning'
     year: '2026'
   MXhG1rkAAAAJ:u5HHmVD_uO8C:
-    citations: 5
+    citations: 6
     title: 'Small drafts, big verdict: Information-intensive visual reasoning via speculation'
     year: '2025'
