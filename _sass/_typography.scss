@@ -1,0 +1,219 @@
+/*******************************************************************************
+ * Typography hierarchy
+ *
+ * Three brightness/weight tiers instead of one:
+ *   title  ->  body  ->  meta
+ * Only the name, section titles and paper titles use the darkest (or in dark
+ * mode, the brightest) text colour; everything else steps down. Imported after
+ * "base" so these rules win without !important.
+ ******************************************************************************/
+
+// Darkest / brightest tier — reserved for headings
+$type-title-light: #202925;
+$type-title-dark: #f0f4f1;
+
+// Secondary tiers
+$type-venue-light: #3f4944;
+$type-venue-dark: #bcc7c1;
+$type-subtitle-light: #66706b;
+$type-subtitle-dark: #9eaca5;
+$type-news-date-light: #303934;
+$type-news-date-dark: #dde5e1;
+$type-news-body-light: #3f4944;
+$type-news-body-dark: #c6d0ca;
+
+// Action buttons
+$btn-border-light: #aab7b1;
+$btn-border-dark: #53645c;
+$btn-text-dark: #c9d3ce;
+$btn-hover-bg-dark: #14251e;
+
+// Venue pill
+$pill-bg-light: #edf2ef;
+$pill-text-light: #3e6e5f;
+$pill-border-light: #cfdcd5;
+$pill-bg-dark: #183126;
+$pill-text-dark: #8dd0b5;
+$pill-border-dark: #2b5545;
+
+$navbar-icon-dark: #c7d1cc;
+
+// Base family ------------------------------------------------------------
+// mdb.min.css hardcodes Roboto on <body>; main.css loads last, so overriding
+// here is enough. Form controls do not inherit by default, hence the list.
+
+$font-sans:
+  "Inter",
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  sans-serif;
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: $font-sans;
+}
+
+// Hero -------------------------------------------------------------------
+
+.post .post-header {
+  .post-title,
+  .post-title .font-weight-bold {
+    font-weight: 680;
+    letter-spacing: -0.015em;
+    color: $type-title-light;
+  }
+
+  .desc {
+    font-weight: 400;
+    color: $type-subtitle-light;
+  }
+}
+
+// Section titles (News / Publications) -----------------------------------
+
+.post article > h2 {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: $type-title-light;
+  margin-top: 0.6rem;
+  margin-bottom: 1.1rem;
+}
+
+// Publications -----------------------------------------------------------
+
+ol.bibliography li {
+  .title {
+    font-weight: 600;
+    color: $type-title-light;
+  }
+
+  .author,
+  .author > span.more-authors {
+    font-weight: 400;
+    color: var(--global-text-color-light);
+  }
+
+  .periodical {
+    font-weight: 400;
+    font-style: italic;
+    color: $type-venue-light;
+  }
+
+  .abbr abbr.badge {
+    display: inline-block;
+    width: auto;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: 0.01em;
+    padding: 3.5px 11px;
+    border-radius: 999px;
+    box-shadow: none;
+    color: $pill-text-light !important;
+    background-color: $pill-bg-light;
+    border: 1px solid $pill-border-light;
+  }
+
+  .links a.btn {
+    color: $type-venue-light;
+    border: 1px solid $btn-border-light;
+
+    &:hover {
+      color: var(--global-theme-color);
+      border-color: var(--global-theme-color);
+    }
+  }
+}
+
+// News -------------------------------------------------------------------
+
+.news table {
+  th {
+    font-weight: 600;
+    color: $type-news-date-light;
+  }
+
+  td {
+    font-weight: 400;
+    color: $type-news-body-light;
+  }
+}
+
+// Profile photo ----------------------------------------------------------
+
+.profile img.z-depth-1 {
+  box-shadow: 0 1px 4px rgba(20, 30, 25, 0.1);
+}
+
+// Dark mode counterparts -------------------------------------------------
+
+html[data-theme="dark"] {
+  .post .post-header {
+    .post-title,
+    .post-title .font-weight-bold {
+      color: $type-title-dark;
+    }
+
+    .desc {
+      color: $type-subtitle-dark;
+    }
+  }
+
+  .post article > h2 {
+    color: $type-title-dark;
+  }
+
+  ol.bibliography li {
+    .title {
+      color: $type-title-dark;
+    }
+
+    .periodical {
+      color: $type-venue-dark;
+    }
+
+    .abbr abbr.badge {
+      color: $pill-text-dark !important;
+      background-color: $pill-bg-dark;
+      border-color: $pill-border-dark;
+    }
+
+    .links a.btn {
+      color: $btn-text-dark;
+      border-color: $btn-border-dark;
+
+      &:hover {
+        color: var(--global-theme-color);
+        border-color: var(--global-theme-color);
+        background: $btn-hover-bg-dark;
+      }
+    }
+  }
+
+  .news table {
+    th {
+      color: $type-news-date-dark;
+    }
+
+    td {
+      color: $type-news-body-dark;
+    }
+  }
+
+  .profile img.z-depth-1 {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
+  }
+
+  .navbar-brand.social a i::before {
+    color: $navbar-icon-dark;
+  }
+
+  .navbar-brand.social a:hover i::before {
+    color: var(--global-theme-color);
+  }
+}
