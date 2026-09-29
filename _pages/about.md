@@ -24,7 +24,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Hi! I’m a first-year Ph.D. student in Computer Science at [NYU Courant](https://cims.nyu.edu/dynamic/) ([Shanghai Track](https://shanghai.nyu.edu/page/computer-science-phd-program)), advised by Prof. [Shengjie Wang](https://sheng-jie-wang.github.io/). I received my B.S. in Data Science (AI track) and Mathematics from [New York University Shanghai](https://shanghai.nyu.edu/) and [New York University](https://www.nyu.edu/) in 2026. I have also been fortunate to collaborate with Prof. [Lianhui Qin](https://lianhui.ucsd.edu/) since my undergraduate studies.
+I’m a first-year Ph.D. student in Computer Science at [NYU Courant](https://cims.nyu.edu/dynamic/) ([Shanghai Track](https://shanghai.nyu.edu/page/computer-science-phd-program)), advised by Prof. [Shengjie Wang](https://sheng-jie-wang.github.io/). I received my B.S. in Data Science (AI track) and Mathematics from [New York University Shanghai](https://shanghai.nyu.edu/) and [New York University](https://www.nyu.edu/) in 2026. I have also been fortunate to collaborate with Prof. [Lianhui Qin](https://lianhui.ucsd.edu/) since my undergraduate studies.
 
 My research interests lie in **embodied AI** and **robotics**, and I am also interested in **reinforcement learning** and **multimodal models**.
 

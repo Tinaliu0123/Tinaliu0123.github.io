@@ -15,6 +15,8 @@ $type-title-dark: #f0f4f1;
 // Secondary tiers
 $type-venue-light: #3f4944;
 $type-venue-dark: #bcc7c1;
+$type-coauthor-light: #6e7872;
+$type-coauthor-dark: #8c9a93;
 $type-subtitle-light: #66706b;
 $type-subtitle-dark: #9eaca5;
 $type-news-date-light: #303934;
@@ -41,20 +43,33 @@ $navbar-icon-dark: #c7d1cc;
 // Base family ------------------------------------------------------------
 // mdb.min.css hardcodes Roboto on <body>; main.css loads last, so overriding
 // here is enough. Form controls do not inherit by default, hence the list.
+//
+// Newsreader is a variable serif with a 200-800 weight axis. Its 700 reads
+// lighter than a sans-serif 700, so every emphasis tier below is set one step
+// heavier than it would be on Inter.
 
-$font-sans:
-  "Inter",
-  -apple-system,
-  BlinkMacSystemFont,
-  "Segoe UI",
-  sans-serif;
+$font-serif: "Newsreader", Georgia, "Times New Roman", serif;
+
+$weight-name: 750; // hero name, the single heaviest thing on the page
+$weight-strong: 700; // paper titles, bold runs in body copy
+$weight-emphasis: 650; // the author's own name inside a byline
+$weight-section: 600; // News / Publications headings
+$weight-body: 450; // Newsreader's 400 reads thin at body size
 
 body,
 button,
 input,
 select,
 textarea {
-  font-family: $font-sans;
+  font-family: $font-serif;
+  font-weight: $weight-body;
+}
+
+// Body copy emphasis. Browsers map <strong> to 700, which in Newsreader is
+// too close to the 400 around it once the text is at reading size.
+strong,
+b {
+  font-weight: $weight-strong;
 }
 
 // Hero -------------------------------------------------------------------
@@ -62,22 +77,29 @@ textarea {
 .post .post-header {
   .post-title,
   .post-title .font-weight-bold {
-    font-weight: 680;
-    letter-spacing: -0.015em;
+    font-size: 2.125rem;
+    font-weight: $weight-name;
+    letter-spacing: 0.015em;
     color: $type-title-light;
   }
 
   .desc {
-    font-weight: 400;
+    font-weight: $weight-body;
     color: $type-subtitle-light;
   }
+}
+
+// Body copy --------------------------------------------------------------
+
+.post article p {
+  line-height: 1.75;
 }
 
 // Section titles (News / Publications) -----------------------------------
 
 .post article > h2 {
-  font-size: 30px;
-  font-weight: 500;
+  font-size: 26px;
+  font-weight: $weight-section;
   line-height: 1.3;
   color: $type-title-light;
   margin-top: 0.6rem;
@@ -85,43 +107,89 @@ textarea {
 }
 
 // Publications -----------------------------------------------------------
+// Scoped under .publications to match the specificity of the base theme's
+// own rules, which are all written that way; a bare ol.bibliography selector
+// loses to them even though this file is imported later.
 
-ol.bibliography li {
+.publications ol.bibliography li {
   .title {
-    font-weight: 600;
+    font-size: 1.1rem;
+    font-weight: $weight-strong;
+    line-height: 1.4;
     color: $type-title-light;
+    margin-bottom: 0.2rem;
   }
 
+  // Co-authors sit a step lighter than the author's own name, which keeps its
+  // underline as the only emphasis.
   .author,
   .author > span.more-authors {
-    font-weight: 400;
-    color: var(--global-text-color-light);
+    font-weight: $weight-body;
+    line-height: 1.6;
+    color: $type-coauthor-light;
+    margin-bottom: 0.2rem;
+  }
+
+  // The author's own name. Weight alone marks it; base.scss underlines it,
+  // which collides with the dashed underline already used for co-author links.
+  .author > em {
+    font-weight: $weight-emphasis;
+    color: $type-title-light;
+    border-bottom: none;
   }
 
   .periodical {
-    font-weight: 400;
+    font-weight: $weight-body;
     font-style: italic;
+    line-height: 1.6;
     color: $type-venue-light;
   }
 
+  .links {
+    margin-top: 0.55rem;
+  }
+
+  // Sized to the preview thumbnail below it so the two read as one block.
   .abbr abbr.badge {
-    display: inline-block;
-    width: auto;
+    display: block;
+    width: 100%;
     font-size: 12px;
-    font-weight: 600;
+    font-weight: $weight-section;
     line-height: 1.35;
     letter-spacing: 0.01em;
-    padding: 3.5px 11px;
-    border-radius: 999px;
+    padding: 4px 11px;
+    border-radius: $radius-badge;
     box-shadow: none;
+    text-align: center;
     color: $pill-text-light !important;
     background-color: $pill-bg-light;
     border: 1px solid $pill-border-light;
   }
 
   .links a.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    // Optical, not box, centring: Newsreader reserves descender space that
+    // "Paper" / "Code" never use, so equal padding leaves the label sitting
+    // high in the pill. The extra top padding puts the ink in the middle.
+    padding: 0.45rem 0.85rem 0.2rem;
+    border-radius: $radius-button;
+    // MDB uppercases .btn labels; these read as words, not controls.
+    font-size: 0.85rem;
+    font-weight: $weight-section;
+    text-transform: none;
     color: $type-venue-light;
     border: 1px solid $btn-border-light;
+
+    i {
+      font-size: 0.95em;
+      line-height: 1;
+      // align-items centres the glyph on the label's em box, which is lower
+      // than the label's optical centre. Nudge it back up to match.
+      position: relative;
+      top: -0.15em;
+    }
 
     &:hover {
       color: var(--global-theme-color);
@@ -130,24 +198,51 @@ ol.bibliography li {
   }
 }
 
+// A bolded link keeps the link colour. base.scss paints every <strong> with
+// the body colour, which would otherwise swallow it.
+a strong {
+  color: inherit;
+}
+
 // News -------------------------------------------------------------------
 
 .news table {
   th {
-    font-weight: 600;
+    font-weight: $weight-section;
     color: $type-news-date-light;
   }
 
   td {
-    font-weight: 400;
+    font-weight: $weight-body;
     color: $type-news-body-light;
   }
 }
 
+// Navbar -----------------------------------------------------------------
+// Selector matches base.scss's own chain so the later import wins. The icons
+// are an <i> font, so font-size is what scales them.
+
+.navbar.navbar-light .navbar-brand.social {
+  font-size: 1.4rem;
+  // inline-flex keeps the brand inline in the navbar while letting `gap` set
+  // the spacing; the markup's own whitespace is dropped inside a flex box, so
+  // this is the only lever and the icons end up evenly spaced.
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
 // Profile photo ----------------------------------------------------------
+// MDB's .z-depth-1 shadow is !important and far too heavy for a 170px photo.
 
 .profile img.z-depth-1 {
-  box-shadow: 0 1px 4px rgba(20, 30, 25, 0.1);
+  box-shadow: 0 1px 4px rgba(20, 30, 25, 0.1) !important;
+}
+
+// The source JPG reads a little dark against a light page. Corrected here
+// rather than baked into the asset so it stays reversible and tunable.
+.profile img {
+  filter: brightness(1.07) saturate(1.03);
 }
 
 // Dark mode counterparts -------------------------------------------------
@@ -168,8 +263,17 @@ html[data-theme="dark"] {
     color: $type-title-dark;
   }
 
-  ol.bibliography li {
+  .publications ol.bibliography li {
     .title {
+      color: $type-title-dark;
+    }
+
+    .author,
+    .author > span.more-authors {
+      color: $type-coauthor-dark;
+    }
+
+    .author > em {
       color: $type-title-dark;
     }
 
@@ -206,7 +310,7 @@ html[data-theme="dark"] {
   }
 
   .profile img.z-depth-1 {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18) !important;
   }
 
   .navbar-brand.social a i::before {

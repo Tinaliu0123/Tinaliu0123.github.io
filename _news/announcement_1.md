@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-[Speculative Verdict (SV)](https://arxiv.org/abs/2510.20812) is accepted by ICLR 2026.
+[**Speculative Verdict (SV)**](https://arxiv.org/abs/2510.20812) is accepted by ICLR 2026.

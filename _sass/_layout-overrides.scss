@@ -1,0 +1,118 @@
+/*******************************************************************************
+ * Layout overrides
+ *
+ * One column grid and one vertical rhythm for the whole page, instead of every
+ * section carrying its own ad-hoc margins. Values come from "design-tokens".
+ * Imported after "base" so these win on cascade order without !important
+ * (except against Bootstrap's utility classes, which are !important at source).
+ ******************************************************************************/
+
+// Hero -------------------------------------------------------------------
+
+.post .post-header {
+  margin-bottom: 1.4rem;
+
+  .post-title {
+    margin-bottom: 0.15rem;
+  }
+
+  .desc {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 576px) {
+  .profile {
+    width: $photo-width;
+  }
+}
+
+.profile.float-right {
+  margin-left: $photo-gap;
+}
+
+.profile.float-left {
+  margin-right: $photo-gap;
+}
+
+// Bootstrap's .rounded utility is !important, so matching it takes one too.
+.profile img.rounded {
+  border-radius: $radius-photo !important;
+}
+
+// Section rhythm ---------------------------------------------------------
+
+.post article > h2 {
+  margin-top: $rhythm-section-to-section;
+  margin-bottom: $rhythm-news-title-to-body;
+
+  // A hairline marks where each section starts, so the rule rather than the
+  // heading text is the top edge the rhythm below is measured from.
+  padding-bottom: $rhythm-title-to-rule;
+  border-bottom: 1px solid var(--global-divider-color);
+
+  // The first section (News) sits further from the bio block above it.
+  &:first-of-type {
+    margin-top: $rhythm-hero-to-section;
+  }
+}
+
+.post article {
+  padding-bottom: $rhythm-content-to-footer;
+}
+
+// News -------------------------------------------------------------------
+// Tighter rows than Bootstrap's .table-sm: these are one-liners, not data.
+
+.news table.table-sm {
+  margin-bottom: 0;
+
+  th,
+  td {
+    padding-top: 0.15rem;
+    padding-bottom: 0.15rem;
+  }
+}
+
+// Publications -----------------------------------------------------------
+// Scoped under .publications to match the specificity of base.scss, which
+// writes every bibliography rule that way; a bare ol.bibliography selector
+// loses to it even though this file is imported later.
+
+.publications ol.bibliography {
+  margin-top: $rhythm-pub-title-to-body - $rhythm-news-title-to-body;
+
+  li {
+    margin-bottom: 0;
+  }
+
+  li + li {
+    margin-top: $rhythm-paper-to-paper;
+  }
+
+  // Fixed-width preview column so the text column grows with the container
+  // instead of every element scaling together.
+  @media (min-width: 576px) {
+    li > .row > .col-sm-4.abbr {
+      flex: 0 0 $preview-width + 2 * $grid-gutter;
+      max-width: $preview-width + 2 * $grid-gutter;
+    }
+
+    // flex-basis 0 rather than auto: with auto the long titles set the basis
+    // and the row wraps the text under the thumbnail.
+    li > .row > .col-sm-8 {
+      flex: 1 1 0%;
+      max-width: none;
+    }
+  }
+
+  li .preview.rounded {
+    border-radius: $radius-preview !important;
+  }
+
+  // Flat cards: the thumbnail already has a frame from its own border radius.
+  // MDB declares .z-depth-1 with !important, so unsetting it needs one too.
+  li .preview.z-depth-1 {
+    box-shadow: none !important;
+  }
+}
