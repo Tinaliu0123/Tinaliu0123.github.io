@@ -61,6 +61,11 @@
   padding-bottom: $rhythm-content-to-footer;
 }
 
+// The footer's Bootstrap mt-5 would stack another 3rem on top of that padding.
+body:has(.post article) footer.sticky-bottom {
+  margin-top: 0 !important;
+}
+
 // News -------------------------------------------------------------------
 // Tighter rows than Bootstrap's .table-sm: these are one-liners, not data.
 
@@ -96,6 +101,15 @@
     li > .row > .col-sm-4.abbr {
       flex: 0 0 $preview-width + 2 * $grid-gutter;
       max-width: $preview-width + 2 * $grid-gutter;
+
+      // Side by side, the thumbnail's own bottom margins (figure 1rem, column
+      // 0.5rem) would add to the gap; drop them so $rhythm-paper-to-paper is the
+      // space between papers. Stacked on phones they still separate image and text.
+      margin-bottom: 0;
+
+      figure {
+        margin-bottom: 0;
+      }
     }
 
     // flex-basis 0 rather than auto: with auto the long titles set the basis
