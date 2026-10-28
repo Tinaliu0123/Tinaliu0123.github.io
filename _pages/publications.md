@@ -17,4 +17,6 @@ nav_order: 2
 
 {% bibliography %}
 
+<p class="pub-legend"><sup>*</sup>Equal contribution &nbsp;·&nbsp; <sup>†</sup>Equal advising</p>
+
 </div>
