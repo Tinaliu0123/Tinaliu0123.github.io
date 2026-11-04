@@ -1,6 +1,7 @@
 {% capture footer_contents %}
   {% if site.last_updated %}
-    Last updated: {{ 'now' | date: '%B %Y' }}.
+    {% comment %} a page may pin its own date (front matter footer_updated, e.g. misc: April 2026); others show the build month {% endcomment %}
+    Last updated: {% if page.footer_updated %}{{ page.footer_updated }}{% else %}{{ 'now' | date: '%B %Y' }}{% endif %}.
   {% endif %}
   {{ site.footer_text }}
   {% if site.impressum_path %}

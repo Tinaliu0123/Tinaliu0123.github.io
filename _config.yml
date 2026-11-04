@@ -333,6 +333,8 @@ filtered_bibtex_keywords:
     inspirehep_id,
     pdf,
     pmid,
+    thread,
+    show_all_authors,
     poster,
     preview,
     selected,

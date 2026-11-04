@@ -28,6 +28,8 @@ I’m a first-year Ph.D. student in Computer Science at [NYU Courant](https://ci
 
 My research interests lie in **embodied AI** and **robotics**, and I am also interested in **reinforcement learning** and **multimodal models**.
 
+<div class="intern-callout" style="margin:1.1rem 0 0.4rem;padding:0.75rem 1rem;border-left:4px solid var(--global-theme-color);background:color-mix(in srgb, var(--global-theme-color) 9%, transparent);border-radius:4px;color:color-mix(in srgb, var(--global-theme-color) 55%, var(--global-text-color))">🤖 <strong style="color:var(--global-theme-color)">Seeking Summer 2027 research internships</strong> in robotics and embodied AI. Feel free to reach out!</div>
+
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder. -->
 
 <!-- Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically. -->
