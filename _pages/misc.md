@@ -5,7 +5,7 @@ permalink: /misc/
 description: A few moments I captured that have great energy ☀️
 nav: true
 nav_order: 7
-footer_updated: April 2026
+footer_updated: November 2026
 _styles: |
   .misc-collage {
     width: 100%;
@@ -112,6 +112,7 @@ _styles: |
 <figure><img src="{{ '/assets/img/misc/web/h-9a-1024.webp' | relative_url }}" data-zoom-src="{{ '/assets/img/misc/web/h-9a-2048.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></figure>
 <figure><img src="{{ '/assets/img/misc/web/h-1a-1024.webp' | relative_url }}" data-zoom-src="{{ '/assets/img/misc/web/h-1a-2048.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></figure>
 <figure><img src="{{ '/assets/img/misc/web/h-2a-1024.webp' | relative_url }}" data-zoom-src="{{ '/assets/img/misc/web/h-2a-2048.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></figure>
+<figure><img src="{{ '/assets/img/misc/web/h-10a-1024.webp' | relative_url }}" data-zoom-src="{{ '/assets/img/misc/web/h-10a-2048.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></figure>
 </div>
 
 <div class="misc-collage__pairs-col misc-collage__pairs-col--b">
@@ -124,6 +125,7 @@ _styles: |
 <figure><img src="{{ '/assets/img/misc/web/h-9b-1024.webp' | relative_url }}" data-zoom-src="{{ '/assets/img/misc/web/h-9b-2048.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></figure>
 <figure><img src="{{ '/assets/img/misc/web/h-1b-1024.webp' | relative_url }}" data-zoom-src="{{ '/assets/img/misc/web/h-1b-2048.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></figure>
 <figure><img src="{{ '/assets/img/misc/web/h-2b-1024.webp' | relative_url }}" data-zoom-src="{{ '/assets/img/misc/web/h-2b-2048.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></figure>
+<figure><img src="{{ '/assets/img/misc/web/h-10b-1024.webp' | relative_url }}" data-zoom-src="{{ '/assets/img/misc/web/h-10b-2048.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></figure>
 </div>
 
 </div>
@@ -135,6 +137,8 @@ _styles: |
 <figure><img src="{{ '/assets/img/misc/web/v-2a-1024.webp' | relative_url }}" data-zoom-src="{{ '/assets/img/misc/web/v-2a-2048.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></figure>
 <figure><img src="{{ '/assets/img/misc/web/v-3a-1024.webp' | relative_url }}" data-zoom-src="{{ '/assets/img/misc/web/v-3a-2048.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></figure>
 <figure><img src="{{ '/assets/img/misc/web/v-4a-1024.webp' | relative_url }}" data-zoom-src="{{ '/assets/img/misc/web/v-4a-2048.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></figure>
+<figure><img src="{{ '/assets/img/misc/web/v-5a-1024.webp' | relative_url }}" data-zoom-src="{{ '/assets/img/misc/web/v-5a-2048.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></figure>
+<figure><img src="{{ '/assets/img/misc/web/v-6a-1024.webp' | relative_url }}" data-zoom-src="{{ '/assets/img/misc/web/v-6a-2048.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></figure>
 </div>
 
 <div class="misc-collage__triples-col misc-collage__triples-col--b">
@@ -142,12 +146,17 @@ _styles: |
 <figure><img src="{{ '/assets/img/misc/web/v-2b-1024.webp' | relative_url }}" data-zoom-src="{{ '/assets/img/misc/web/v-2b-2048.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></figure>
 <figure><img src="{{ '/assets/img/misc/web/v-3b-1024.webp' | relative_url }}" data-zoom-src="{{ '/assets/img/misc/web/v-3b-2048.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></figure>
 <figure><img src="{{ '/assets/img/misc/web/v-4b-1024.webp' | relative_url }}" data-zoom-src="{{ '/assets/img/misc/web/v-4b-2048.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></figure>
+<figure><img src="{{ '/assets/img/misc/web/v-5b-1024.webp' | relative_url }}" data-zoom-src="{{ '/assets/img/misc/web/v-5b-2048.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></figure>
+<figure><img src="{{ '/assets/img/misc/web/v-6b-1024.webp' | relative_url }}" data-zoom-src="{{ '/assets/img/misc/web/v-6b-2048.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></figure>
 </div>
 
 <div class="misc-collage__triples-col misc-collage__triples-col--c">
 <figure><img src="{{ '/assets/img/misc/web/v-1c-1024.webp' | relative_url }}" data-zoom-src="{{ '/assets/img/misc/web/v-1c-2048.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></figure>
 <figure><img src="{{ '/assets/img/misc/web/v-2c-1024.webp' | relative_url }}" data-zoom-src="{{ '/assets/img/misc/web/v-2c-2048.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></figure>
 <figure><img src="{{ '/assets/img/misc/web/v-3c-1024.webp' | relative_url }}" data-zoom-src="{{ '/assets/img/misc/web/v-3c-2048.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></figure>
+<figure><img src="{{ '/assets/img/misc/web/v-4c-1024.webp' | relative_url }}" data-zoom-src="{{ '/assets/img/misc/web/v-4c-2048.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></figure>
+<figure><img src="{{ '/assets/img/misc/web/v-5c-1024.webp' | relative_url }}" data-zoom-src="{{ '/assets/img/misc/web/v-5c-2048.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></figure>
+<figure><img src="{{ '/assets/img/misc/web/v-6c-1024.webp' | relative_url }}" data-zoom-src="{{ '/assets/img/misc/web/v-6c-2048.webp' | relative_url }}" alt="" loading="lazy" decoding="async"></figure>
 </div>
 
 </div>
